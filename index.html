@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Idade | JV Codes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="panel">
+        <h1>Calculadora de Idade</h1>
+        <form onsubmit="calculateAge(event)" aria-describedby="result">
+            <fieldset class="form-group">
+                <legend>Data de Nascimento:</legend>
+                <div class="dob-fields">
+                    <label for="dob-month" class="visually-hidden">Mês de Nascimento</label>
+                    <select id="dob-month" aria-label="Mês de Nascimento" onchange="updateDays('dob-day')">
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+
+                    <label for="dob-day" class="visually-hidden">Dia de Nascimento</label>
+                    <select id="dob-day" aria-label="Dia de Nascimento">
+                        <!-- Dias serão populados aqui com base no mês selecionado -->
+                    </select>
+
+                    <label for="dob-year" class="visually-hidden">Ano de Nascimento</label>
+                    <input type="number" id="dob-year" placeholder="Ano" min="1900" aria-label="Ano de Nascimento" onchange="updateDays('dob-day')" />
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <legend>Idade em:</legend>
+                <div class="age-at-fields">
+                    <label for="ageAt-month" class="visually-hidden">Mês de Cálculo</label>
+                    <select id="ageAt-month" aria-label="Mês de Cálculo" onchange="updateDays('ageAt-day')">
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+
+                    <label for="ageAt-day" class="visually-hidden">Dia de Cálculo</label>
+                    <select id="ageAt-day" aria-label="Dia de Cálculo">
+                        <!-- Dias serão populados aqui com base no mês selecionado -->
+                    </select>
+
+                    <label for="ageAt-year" class="visually-hidden">Ano de Cálculo</label>
+                    <input type="number" id="ageAt-year" placeholder="Ano" min="1900" aria-label="Ano de Cálculo" onchange="updateDays('ageAt-day')" />
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Calcular Idade" aria-label="Calcular Idade" />
+        </form>
+
+        <div id="result" class="result" role="region" aria-live="polite"></div>
+    </main>
+</body>
+</html>
