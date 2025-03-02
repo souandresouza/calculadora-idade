@@ -1,0 +1,96 @@
+/* Global Styles for Body */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Use a modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: 400; /* Lighter font weight for a cleaner look */
+}
+
+.panel {
+    background: #fff;
+    padding: 20px; /* Reduced padding for a more compact look */
+    border-radius: 10px; /* Softer corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    width: 100%;
+    max-width: 500px; /* Reduced max-width for a more compact design */
+    transition: transform 0.3s ease;
+}
+
+.panel:hover {
+    transform: scale(1.02); /* Subtle hover effect */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Reduced space below heading */
+    font-size: 24px; /* Slightly smaller font size */
+}
+
+form {
+    display: grid;
+    gap: 15px; /* Reduced gap for a tighter layout */
+}
+
+.dob-fields select, .dob-fields input[type="number"],
+.age-at-fields select, .age-at-fields input[type="number"] {
+    width: 32%; /* Adjusted width for better alignment */
+    padding: 8px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
+    border: 1px solid #ddd; /* Lighter border color */
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.dob-fields select:focus, .dob-fields input[type="number"]:focus,
+.age-at-fields select:focus, .age-at-fields input[type="number"]:focus {
+    border-color: #007bff; /* Consistent focus color */
+}
+
+input[type="submit"] {
+    padding: 10px 20px; /* Consistent padding */
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Smaller font size */
+    font-weight: 600; /* Consistent font weight */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+    transform: translateY(-1px); /* Subtle lift on hover */
+}
+
+.result {
+    margin-top: 15px; /* Reduced margin */
+    padding: 10px;
+    background: #f9f9f9; /* Softer background color */
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 5px;
+    color: #333; /* Consistent text color */
+    width: 100%;
+    height: auto; /* Adjust height to content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 14px; /* Smaller font size */
+    overflow-y: auto;
+}
+
+.result p {
+    margin: 0;
+    font-size: 14px; /* Consistent font size */
+}
+
+.age-bold {
+    font-weight: bold;
+    color: #720340;
+}
